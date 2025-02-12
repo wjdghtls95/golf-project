@@ -20,9 +20,9 @@ export class Server {
       .setVersion('1.0')
       .build();
 
-    const document = SwaggerModule.createDocument(this.app, config, {
-      include: [AppModule],
-    });
+    const document = SwaggerModule.createDocument(this.app, config);
+
+    console.log(document);
 
     const SWAGGER_CUSTOM_OPTIONS: SwaggerCustomOptions = {
       swaggerOptions: {
@@ -37,7 +37,7 @@ export class Server {
 
   async run(): Promise<void> {
     Logger.log(
-      `Golf Project Server is running on port: ${process.env.SERVER_PORT}`,
+      'Golf Project Server is running on port:' + process.env.SERVER_PORT,
     );
 
     await this.app.listen(process.env.SERVER_PORT, '0.0.0.0');

@@ -1,7 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
-import { ApiOperation } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { DefaultService } from './default.service';
 
+@ApiTags('health')
 @Controller()
 export class DefaultController {
   constructor(private readonly appService: DefaultService) {}
