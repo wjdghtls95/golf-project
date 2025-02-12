@@ -4,7 +4,6 @@ import {
   SwaggerCustomOptions,
   SwaggerModule,
 } from '@nestjs/swagger';
-import { AppModule } from './app.module';
 
 export class Server {
   constructor(private readonly app: INestApplication) {}
