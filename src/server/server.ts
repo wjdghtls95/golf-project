@@ -22,8 +22,6 @@ export class Server {
 
     const document = SwaggerModule.createDocument(this.app, config);
 
-    console.log(document);
-
     const SWAGGER_CUSTOM_OPTIONS: SwaggerCustomOptions = {
       swaggerOptions: {
         persistAuthorization: true,
